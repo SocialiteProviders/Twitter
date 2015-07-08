@@ -58,7 +58,7 @@ class Server extends BaseServer
             $user->email = $data['email'];
         }
 
-        $used = ['id', 'screen_name', 'name', 'location', 'description', 'profile_image_url', 'email')];
+        $used = ['id', 'screen_name', 'name', 'location', 'description', 'profile_image_url', 'email'];
 
         foreach ($data as $key => $value) {
             if (strpos($key, 'url') !== false) {
