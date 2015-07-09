@@ -8,4 +8,4 @@
 
 ## Documentation
 
-Full documentation for using this provider can be found at [Twitter Documentation](http://SocialiteProvider.github.io/providers/twitter/)
+Full documentation for using this provider can be found at [Twitter Documentation](http://socialiteproviders.github.io/providers/twitter/)
