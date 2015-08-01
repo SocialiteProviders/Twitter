@@ -8,7 +8,7 @@ use Laravel\Socialite\One\User;
 class Provider extends AbstractProvider
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function user()
     {
