@@ -2,13 +2,12 @@
 
 namespace SocialiteProviders\Twitter;
 
-use Laravel\Socialite\One\AbstractProvider;
 use Laravel\Socialite\One\User;
 
-class Provider extends AbstractProvider
+class Provider extends TwitterAbstractProvider
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function user()
     {
