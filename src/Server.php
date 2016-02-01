@@ -46,7 +46,7 @@ class Server extends BaseServer
     public function userDetails($data, TokenCredentials $tokenCredentials)
     {
         $user = new User();
-        $user->uid = $data['id'];
+        $user->id = $data['id'];
         $user->nickname = $data['screen_name'];
         $user->name = $data['name'];
         $user->location = $data['location'];

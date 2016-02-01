@@ -7,7 +7,7 @@ use Laravel\Socialite\One\User;
 class Provider extends TwitterAbstractProvider
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function user()
     {

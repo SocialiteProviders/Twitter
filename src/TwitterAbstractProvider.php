@@ -21,8 +21,7 @@ abstract class TwitterAbstractProvider extends AbstractProvider implements Provi
             );
         } else {
             $temp = $this->server->getTemporaryCredentials();
-            setcookie('oauth_temp',serialize($temp));
-
+            setcookie('oauth_temp', serialize($temp));
         }
 
         return new RedirectResponse($this->server->getAuthorizationUrl($temp));
@@ -42,13 +41,11 @@ abstract class TwitterAbstractProvider extends AbstractProvider implements Provi
                 $temp, $this->request->get('oauth_token'), $this->request->get('oauth_verifier')
             );
         } else {
-
             $temp = unserialize($_COOKIE['oauth_temp']);
 
             return $this->server->getTokenCredentials(
                 $temp, $this->request->get('oauth_token'), $this->request->get('oauth_verifier')
             );
-
         }
     }
 
