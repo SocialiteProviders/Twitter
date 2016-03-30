@@ -2,10 +2,16 @@
 
 namespace SocialiteProviders\Twitter;
 
-use Laravel\Socialite\One\User;
+use SocialiteProviders\Manager\OAuth1\User;
+use SocialiteProviders\Manager\OAuth1\AbstractProvider;
 
-class Provider extends TwitterAbstractProvider
+class Provider extends  AbstractProvider
 {
+    /**
+     * Unique Provider Identifier.
+     */
+    const IDENTIFIER = 'TWITTER';
+
     /**
      * {@inheritdoc}
      */
