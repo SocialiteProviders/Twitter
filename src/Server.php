@@ -51,7 +51,7 @@ class Server extends BaseServer
         $user->name = $data['name'];
         $user->location = $data['location'];
         $user->description = $data['description'];
-        $user->imageUrl = $data['profile_image_url'];
+        $user->avatar = $data['profile_image_url'];
         $user->email = null;
 
         if (isset($data['email'])) {
