@@ -25,4 +25,18 @@ class Provider extends AbstractProvider
              'avatar' => $user['avatar'],
         ]);
     }
+    
+    /**
+     * @return $this
+     */
+    public function applyConfig()
+    {
+        $tokenCredentials = $this->server->getClientCredentials();
+        $config = $this->config;
+
+        $tokenCredentials->setIdentifier($config->clientId);
+        $tokenCredentials->setSecret($config->clientSecret);
+
+        return $this;
+    }
 }
