@@ -102,17 +102,17 @@ class Server extends BaseServer
     /**
      * {@inheritdoc}
      */
-    public function getAuthorizationUrl($temporaryIdentifier)
+    public function getAuthorizationUrl($temporaryIdentifier, array $options = [])
     {
         // Somebody can pass through an instance of temporary
         // credentials and we'll extract the identifier from there.
         if ($temporaryIdentifier instanceof TemporaryCredentials) {
             $temporaryIdentifier = $temporaryIdentifier->getIdentifier();
         }
-        $query_oauth_token = ['oauth_token' => $temporaryIdentifier];
+        $queryOauthToken = ['oauth_token' => $temporaryIdentifier];
         $parameters = (isset($this->parameters))
-            ? array_merge($query_oauth_token, $this->parameters)
-            : $query_oauth_token;
+            ? array_merge($queryOauthToken, $this->parameters)
+            : $queryOauthToken;
 
         $url = $this->urlAuthorization();
         $queryString = http_build_query($parameters);
