@@ -20,7 +20,7 @@ Please see the [Base Installation Guide](https://socialiteproviders.com/usage/),
 
 ### Enable Sign in With Twitter
 
-You will need to enable **3-legged OAuth** in the [Twitter Developers Dashboard](https://developer.twitter.com/en/apps). Make sure to also add your callback URL.
+You will need to enable **[3-legged OAuth](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)** in the [Twitter Developers Dashboard](https://developer.twitter.com/en/apps). Make sure to also add your callback URL.
 
 ### Add provider event listener
 
